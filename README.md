@@ -1,4 +1,4 @@
-# guidance
+# guide
 
 ## Project setup
 ```
