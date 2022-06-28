@@ -1,8 +1,8 @@
 <template>
   <div class="tools-name">限时专区</div>
   <hr color="#f0f0f0" />
-  <a-row type="flex">
-    <a-col :span="4" :order="1">
+  <a-row type="flex" :gutter="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="1">
       <a class="tools-hover" href="http://www.itmind.net/15726.html" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://cxy521.com/static/img/index/limit/aliyun.png"
@@ -13,7 +13,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="2">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="2">
       <a class="tools-hover" href="http://www.itmind.net/13235.html" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://cxy521.com/static/img/index/limit/qq_music.png"
@@ -24,7 +24,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="3">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="3">
       <a class="tools-hover" href="http://www.itmind.net/13398.html" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://cxy521.com/static/img/index/limit/typora.png"
@@ -35,7 +35,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="4">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="4">
       <a class="tools-hover" href="http://www.itmind.net/13211.html" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://cxy521.com/static/img/index/limit/beyond_compare.png"
@@ -46,7 +46,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="5">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="5">
       <a class="tools-hover" href="http://www.itmind.net/17070.html" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://www.adobe.com/content/dam/cc/us/en/creativecloud/max2020/mnemonics/photoshop.svg"
@@ -57,7 +57,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="6">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="6">
       <a class="tools-hover" href="http://www.itmind.net/12214.html" target="blank">
         <div class="icon"
           ><img class="tools-img" src="@/assets/idea.png"
@@ -68,7 +68,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="7">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="7">
       <a class="tools-hover" href="http://www.itmind.net/12988.html" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://cxy521.com/static/img/index/limit/pycharm.png"
@@ -79,7 +79,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="8">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="8">
       <a class="tools-hover" href="http://www.itmind.net/15207.html" target="blank">
         <div class="icon"
           ><img class="tools-img" src="@/assets/webstorm.png"
@@ -90,7 +90,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="9">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="9">
       <a class="tools-hover" href="http://www.itmind.net/12766.html" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://cxy521.com/static/img/index/limit/xshell.png"
@@ -101,7 +101,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="10">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="10">
       <a class="tools-hover" href="http://www.itmind.net/12557.html" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://cxy521.com/static/img/index/devtool/navicat.png"
@@ -112,7 +112,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="11">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="11">
       <a class="tools-hover" href="http://www.itmind.net/12592.html" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://cxy521.com/static/img/index/limit/python.png"
@@ -123,7 +123,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="12">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="12">
       <a class="tools-hover" href="http://www.itmind.net/13268.html" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://cxy521.com/static/img/index/limit/likou.png"
@@ -134,7 +134,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="13">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="13">
       <a class="tools-hover" href="http://www.itmind.net/16068.html" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://cxy521.com/static/img/index/limit/jl.png"
@@ -145,7 +145,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="14">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="14">
       <a class="tools-hover" href="http://www.itmind.net/16027.html" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://cxy521.com/static/img/index/limit/git.jpg"
@@ -156,7 +156,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="15">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="15">
       <a class="tools-hover" href="http://www.itmind.net/12846.html" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://cxy521.com/static/img/index/limit/network-pdf.png"

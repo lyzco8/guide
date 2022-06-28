@@ -6,6 +6,7 @@
         >程序员导航</a-typography-title
       >
       <span
+        v-if="show_time"
         style="
           font-size: 22px;
           color: #fff;
@@ -17,7 +18,7 @@
         >{{ nowTime }}</span
       >
     </a-layout-header>
-    <a-layout has-sider>
+    <a-layout has-sider v-if="show">
       <a-layout-sider
         v-model:collapsed="collapsed"
         collapsible
@@ -77,16 +78,8 @@
       </a-layout-sider>
     </a-layout>
 
-    <a-layout-content style="margin: 0px 30px 0px 200px; padding: 0 50px">
-      <a-layout
-        style="
-          border-radius: 20px;
-          padding: 24px 0;
-          margin: 30px 10px;
-          background: #fff;
-          overflow: initial;
-        "
-      >
+    <a-layout-content class="a-layout-content">
+      <a-layout>
         <a-layout-content :style="{ padding: '0 24px', minHeight: '280px' }">
           <div id="d1">
             <UsefulTools />
@@ -109,7 +102,24 @@
   </a-layout>
   <div id="components-back-top-demo-custom">
     <a-back-top>
-      <div class="ant-back-top-inner"><rocket-outlined :style="{ fontSize: '40px' }" /></div>
+      <div class="ant-back-top-inner">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon back-to-top-icon"
+          viewBox="0 0 1024 1024"
+          ariaLabelledby="back-to-top"
+        >
+          <title id="back-to-top" lang="en">back-to-top icon</title>
+          <g fill="currentColor">
+            <path
+              d="M512 843.2c-36.2 0-66.4-13.6-85.8-21.8-10.8-4.6-22.6 3.6-21.8 15.2l7 102c.4 6.2 7.6 9.4 12.6 5.6l29-22c3.6-2.8 9-1.8 11.4 2l41 64.2c3 4.8 10.2 4.8 13.2 0l41-64.2c2.4-3.8 7.8-4.8 11.4-2l29 22c5 3.8 12.2.6 12.6-5.6l7-102c.8-11.6-11-20-21.8-15.2-19.6 8.2-49.6 21.8-85.8 21.8z"
+            ></path>
+            <path
+              d="m795.4 586.2-96-98.2C699.4 172 513 32 513 32S324.8 172 324.8 488l-96 98.2c-3.6 3.6-5.2 9-4.4 14.2L261.2 824c1.8 11.4 14.2 17 23.6 10.8L419 744s41.4 40 94.2 40c52.8 0 92.2-40 92.2-40l134.2 90.8c9.2 6.2 21.6.6 23.6-10.8l37-223.8c.4-5.2-1.2-10.4-4.8-14zM513 384c-34 0-61.4-28.6-61.4-64s27.6-64 61.4-64c34 0 61.4 28.6 61.4 64S547 384 513 384z"
+            ></path>
+          </g>
+        </svg>
+      </div>
       TOP
     </a-back-top>
   </div>
@@ -117,15 +127,13 @@
 <script>
   import { defineComponent, onMounted, ref } from 'vue';
   import { formateDate } from '@/components/date/nowDate';
-  import { RocketOutlined } from '@ant-design/icons-vue';
-  import UsefulTools from '@/components/content/usefulTools.vue';
-  import JishuPage from '@/components/content/jishuPage.vue';
-  import XianshiPage from '@/components/content/xianshiPage.vue';
-  import MoyuPage from '@/components/content/moyuPage.vue';
+  import UsefulTools from '@/components/content/UsefulTools.vue';
+  import JishuPage from '@/components/content/JishuPage.vue';
+  import XianshiPage from '@/components/content/XianshiPage.vue';
+  import MoyuPage from '@/components/content/MoyuPage.vue';
 
   export default defineComponent({
     components: {
-      RocketOutlined,
       UsefulTools,
       JishuPage,
       XianshiPage,
@@ -135,11 +143,28 @@
     setup() {
       const containerRef = ref();
       const nowTime = ref('');
+      const show = ref();
+      const show_time = ref();
 
       onMounted(() => {
         setInterval(() => {
           nowTime.value = formateDate(new Date());
         });
+
+        window.onresize = () => {
+          window.screenWidth = document.body.clientWidth;
+          if (window.screenWidth <= 992) {
+            show.value = false;
+          } else {
+            show.value = true;
+          }
+          if (window.screenWidth <= 768) {
+            show_time.value = false;
+          } else {
+            show_time.value = true;
+          }
+        };
+        window.onresize();
       });
 
       return {
@@ -149,6 +174,8 @@
         openKeys: ref(['sub1']),
         collapsed: ref(false),
         nowTime,
+        show,
+        show_time,
       };
     },
   });
@@ -182,6 +209,28 @@
     border-radius: 100%;
     width: 40px;
     height: 40px;
+  }
+
+  @media screen and (max-width: 992px) {
+    .a-layout-content {
+      margin: 0px 2px;
+      /* padding: 0 50px; */
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .a-layout-content {
+      margin: 0px 30px 0px 200px;
+      padding: 0 50px;
+    }
+  }
+
+  .a-layout-content .ant-layout {
+    border-radius: 20px;
+    padding: 24px 0;
+    margin: 30px 10px;
+    background: #fff;
+    overflow: initial;
   }
 
   .ant-anchor-link {

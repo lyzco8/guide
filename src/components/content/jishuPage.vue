@@ -1,8 +1,8 @@
 <template>
   <div class="tools-name">技术社区</div>
   <hr color="#f0f0f0" />
-  <a-row type="flex">
-    <a-col :span="4" :order="1">
+  <a-row type="flex" :gutter="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="1">
       <a class="tools-hover" href="https://www.cnblogs.com/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://cxysite.com/static/img/ltzx/cnblogs.png"
@@ -13,7 +13,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="2">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="2">
       <a class="tools-hover" href="https://www.csdn.net/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://cxysite.com/static/img/ltzx/csdn.png"
@@ -24,7 +24,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="3">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="3">
       <a class="tools-hover" href="https://www.oschina.net/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://cxysite.com/static/img/ltzx/oschina(1).ico"
@@ -35,7 +35,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="4">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="4">
       <a class="tools-hover" href="https://segmentfault.com/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://cxysite.com/static/img/ltzx/sf.ico"
@@ -46,7 +46,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="5">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="5">
       <a class="tools-hover" href="https://juejin.im/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://cxysite.com/static/img/ltzx/juejin.png"
@@ -57,7 +57,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="6">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="6">
       <a class="tools-hover" href="https://www.51cto.com/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://cxysite.com/static/img/ltzx/51.ico"
@@ -68,7 +68,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="7">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="7">
       <a class="tools-hover" href="https://toutiao.io/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://cxysite.com/static/img/ltzx/toutiao.png"
@@ -79,7 +79,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="8">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="8">
       <a class="tools-hover" href="https://xie.infoq.cn/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://cxysite.com/static/img/ltzx/InfoQ.jpg"
@@ -90,7 +90,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="9">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="9">
       <a class="tools-hover" href="https://stackoverflow.com/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://cxysite.com/static/img/ltzx/stackoverflow.svg"
@@ -101,7 +101,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="10">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="10">
       <a class="tools-hover" href="http://www.chinaunix.net/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://cxysite.com/static/img/ltzx/cu.png"
@@ -112,7 +112,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="11">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="11">
       <a class="tools-hover" href="https://studygolang.com/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://cxysite.com/static/img/ltzx/golang.ico"
@@ -123,7 +123,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="12">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="12">
       <a class="tools-hover" href="https://ruby-china.org/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://cxysite.com/static/img/ltzx/ruby.png"
@@ -140,16 +140,10 @@
   export default {};
 </script>
 <style>
-  .tools-name {
-    font-weight: bold;
-    font-size: 18px;
-    text-align: left;
-  }
-
   .tools-hover {
     display: flex;
     text-align: left;
-    margin-top: 10px;
+    margin: 10px 0px;
     width: 100%;
     min-height: 80px;
   }
@@ -162,7 +156,7 @@
   }
 
   .tools-hover .icon .tools-img {
-    margin-left: 24px;
+    margin-left: 10px;
     margin-top: 15px;
     width: 26px;
   }

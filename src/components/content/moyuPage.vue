@@ -1,8 +1,8 @@
 <template>
   <div class="tools-name">摸鱼专区</div>
   <hr color="#f0f0f0" />
-  <a-row type="flex">
-    <a-col :span="4" :order="1">
+  <a-row type="flex" :gutter="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="1">
       <a class="tools-hover" href="http://buhuixiao.com" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://cxy521.com/static/img/index/relax/laughyouth.png"
@@ -13,7 +13,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="2">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="2">
       <a class="tools-hover" href="https://tophub.today/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://file.ipadown.com/tophub/assets/images/logo.png"
@@ -24,7 +24,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="3">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="3">
       <a class="tools-hover" href="https://www.zhihu.com/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://static.zhihu.com/heifetz/favicon.ico"
@@ -35,7 +35,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="4">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="4">
       <a class="tools-hover" href="https://mo.fish" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://cxy521.com/static/img/index/relax/fish.ico"
@@ -46,7 +46,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="5">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="5">
       <a class="tools-hover" href="https://www.qiushibaike.com/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://cxy521.com/static/img/index/relax/baike.jpg"
@@ -57,7 +57,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="6">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="6">
       <a class="tools-hover" href="http://www.itmind.net/xbw/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://cxy521.com/static/img/index/relax/yx.png"
@@ -68,7 +68,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="7">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="7">
       <a class="tools-hover" href="https://fishpi.cn/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://fishpi.cn/images/favicon.png"
@@ -79,7 +79,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="8">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="8">
       <a class="tools-hover" href="https://p.hancel.org/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://p.hancel.org/images/mofish.jpg"
@@ -90,7 +90,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="9">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="9">
       <a class="tools-hover" href="http://adarkroom.doublespeakgames.com/?lang=zh_cn" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://www.cxy521.com/static/img/index/relax/adr.png"
@@ -101,7 +101,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="10">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="10">
       <a class="tools-hover" href="http://www.chinaunix.net/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://cxysite.com/static/img/ltzx/cu.png"
@@ -112,7 +112,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="11">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="11">
       <a class="tools-hover" href="http://www.itmind.net/tetris/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://www.cxy521.com/static/img/index/relax/tetris.jpg"
@@ -123,7 +123,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="12">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="12">
       <a class="tools-hover" href="https://dig.chouti.com/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://www.cxy521.com/static/img/index/relax/chouti.png"
@@ -134,7 +134,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="13">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="13">
       <a class="tools-hover" href="https://www.webhek.com/post/draw-a-stickman.html" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://www.cxy521.com/static/img/index/relax/fwebhek.ico"
@@ -145,7 +145,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="14">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="14">
       <a class="tools-hover" href="https://findtheinvisiblecow.com" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://www.cxy521.com/static/img/index/relax/findtheinvisiblecow.png"
@@ -156,7 +156,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="15">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="15">
       <a class="tools-hover" href="https://2020game.io/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://www.cxy521.com/static/img/index/relax/2020.png"
@@ -167,7 +167,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="16">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="16">
       <a class="tools-hover" href="https://mp.weixin.qq.com/s/LWagJEHnitxkYtXeCy3zRg" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://www.cxy521.com/static/img/index/relax/hongbao.png"
@@ -178,7 +178,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="17">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="17">
       <a class="tools-hover" href="https://strobe.cool/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://www.cxy521.com/static/img/index/relax/strobe.ico"
@@ -189,7 +189,7 @@
         </div>
       </a>
     </a-col>
-    <a-col :span="4" :order="18">
+    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="18">
       <a class="tools-hover" href="https://bouncyballs.org/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="http://www.cxy521.com/static/img/index/relax/bouncyballs.ico"
