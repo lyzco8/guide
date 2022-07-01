@@ -1,8 +1,8 @@
 <template>
   <div class="tools-name">常用工具</div>
   <hr color="#f0f0f0" />
-  <a-row type="flex" :gutter="{ xs: 8, sm: 16, md: 24, lg: 32 }">
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="1">
+  <a-row :gutter="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="1">
       <div class="tools-width">
         <a class="tools-link" href="https://www.linuxcool.com/" target="blank"
           ><img
@@ -12,7 +12,7 @@
         >
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="2">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="2">
       <div class="tools-width">
         <a class="tools-link" href="https://www.lingdaima.com/" target="blank"
           ><img
@@ -22,14 +22,14 @@
         >
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="3">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="3">
       <div class="tools-width">
         <a class="tools-link" href="http://hemin.cn/jq/" target="blank">
           <img class="tools-img" src="http://hemin.cn/jq/img/favicon.ico" />&nbsp;jQuery速查表
         </a>
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="4">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="4">
       <div class="tools-width">
         <a class="tools-link" href="https://tool.lu/hexconvert/" target="blank">
           <img
@@ -39,14 +39,14 @@
         </a>
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="5">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="5">
       <div class="tools-width">
         <a class="tools-link" href="https://tool.lu/ip/" target="blank">
           <img class="tools-img" src="http://cxysite.com/static/img/cygj/ip.png" />&nbsp;IP地址查询
         </a>
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="6">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="6">
       <div class="tools-width">
         <a class="tools-link" href="https://tool.lu/base64image/" target="blank"
           ><img
@@ -56,7 +56,7 @@
         >
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="7">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="7">
       <div class="tools-width">
         <a class="tools-link" href="https://tool.lu/coderunner/" target="blank"
           ><img
@@ -66,7 +66,7 @@
         >
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="8">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="8">
       <div class="tools-width">
         <a class="tools-link" href="https://tool.oschina.net/regex/" target="blank">
           <img
@@ -76,7 +76,7 @@
         </a>
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="9">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="9">
       <div class="tools-width">
         <a class="tools-link" href="https://tool.lu/urlconvert/" target="blank">
           <img
@@ -86,7 +86,7 @@
         </a>
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="10">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="10">
       <div class="tools-width">
         <a class="tools-link" href="https://tool.lu/timestamp/" target="blank"
           ><img
@@ -96,7 +96,7 @@
         >
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="11">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="11">
       <div class="tools-width">
         <a class="tools-link" href="https://tool.lu/curl/" target="blank"
           ><img
@@ -106,7 +106,7 @@
         >
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="12">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="12">
       <div class="tools-width">
         <a class="tools-link" href="https://tool.lu/zhconvert" target="blank"
           ><img
@@ -116,7 +116,7 @@
         >
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="13">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="13">
       <div class="tools-width">
         <a class="tools-link" href="https://tool.gaodun.com/rmb.html" target="blank">
           <img
@@ -126,7 +126,7 @@
         </a>
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="14">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="14">
       <div class="tools-width">
         <a class="tools-link" href="https://cli.im/" target="blank">
           <img
@@ -136,14 +136,14 @@
         </a>
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="15">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="15">
       <div class="tools-width">
         <a class="tools-link" href="https://tool.lu/encdec/" target="blank">
           <img class="tools-img" src="http://cxysite.com/static/img/cygj/jj.png" />&nbsp;加密解密
         </a>
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="16">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="16">
       <div class="tools-width">
         <a class="tools-link" href="https://tool.lu/crontab" target="blank"
           ><img
@@ -153,14 +153,14 @@
         >
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="17">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="17">
       <div class="tools-width">
         <a class="tools-link" href="https://www.photopea.com/" target="blank"
           ><img class="tools-img" src="http://cxysite.com/static/img/cygj/ps.png" />&nbsp;在线PS</a
         >
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="18">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="18">
       <div class="tools-width">
         <a class="tools-link" href="http://favorites.ren/" target="blank">
           <img
@@ -170,21 +170,21 @@
         </a>
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="19">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="19">
       <div class="tools-width">
         <a class="tools-link" href="https://fanyi.baidu.com/translate" target="blank">
           <img class="tools-img" src="http://cxysite.com/static/img/cygj/bf.ico" />&nbsp;百度翻译
         </a>
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="20">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="20">
       <div class="tools-width">
         <a class="tools-link" href="https://translate.google.cn/" target="blank">
           <img class="tools-img" src="http://cxysite.com/static/img/cygj/gf.ico" />&nbsp;谷歌翻译
         </a>
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="21">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="21">
       <div class="tools-width">
         <a class="tools-link" href="https://convertio.co/zh/" target="blank"
           ><img
@@ -194,14 +194,14 @@
         >
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="22">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="22">
       <div class="tools-width">
         <a class="tools-link" href="https://mvnrepository.com/" target="blank"
           ><img class="tools-img" src="@/assets/mvnrepository.png" />&nbsp;maven仓库</a
         >
       </div>
     </a-col>
-    <a-col :xs="12" :sm="8" :md="6" :lg="4" :order="23">
+    <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="23">
       <div class="tools-width">
         <a class="tools-link" href="https://mp.weixin.qq.com/" target="blank"
           ><img

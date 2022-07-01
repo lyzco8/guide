@@ -1,19 +1,60 @@
 <template>
   <a-layout>
-    <a-layout-header class="header" style="position: relative; background: #434343">
-      <div class="logo" />
-      <a-typography-title :level="2" style="color: #fff; float: left; margin: 10px 0px"
+    <a-layout-header
+      class="header"
+      style="background: #434343; width: 100%; height: 60px; z-index: 10"
+      :style="{ overflow: 'auto', position: 'fixed' }"
+    >
+      <img src="favicon.ico" class="a-icon" style="width: 32px" />
+      <a-typography-title :level="3" class="a-title" style="color: #fff" v-if="tag"
         >程序员导航</a-typography-title
       >
+      <a-dropdown v-if="!show">
+        <a class="ant-dropdown-link" @click.prevent style="color: #fff">
+          <appstore-filled />
+          导航标签
+        </a>
+        <template #overlay>
+          <a-menu style="border-radius: 5px;width: 125px;">
+          <a-anchor :affix="false" :getContainer="container" :target-offset="targetOffset">
+            <a-menu-item key="tag1" class="hidden-menu-item">
+              <a-anchor-link href="#d1" title="常用工具" style="font-size: 1rem" />
+            </a-menu-item>
+            <a-menu-item key="tag2" class="hidden-menu-item">
+              <a-anchor-link href="#d2" title="技术社区" style="font-size: 1rem" />
+            </a-menu-item>
+            <a-menu-item key="tag3" class="hidden-menu-item">
+              <a-anchor-link href="#d3" title="限时专区" style="font-size: 1rem" />
+            </a-menu-item>
+            <a-menu-item key="tag4" class="hidden-menu-item">
+              <a-anchor-link href="#d4" title="摸鱼专区" style="font-size: 1rem" />
+            </a-menu-item>
+            <a-menu-item key="tag5" class="hidden-menu-item">
+              <a-anchor-link href="#d5" title="视频专区" style="font-size: 1rem" />
+            </a-menu-item>
+            <a-menu-item key="tag6" class="hidden-menu-item">
+              <a-anchor-link href="#d6" title="学习平台" style="font-size: 1rem" />
+            </a-menu-item>
+            <a-menu-item key="tag7" class="hidden-menu-item">
+              <a-anchor-link href="#d7" title="协同工作" style="font-size: 1rem" />
+            </a-menu-item>
+            <a-menu-item key="tag8" class="hidden-menu-item">
+              <a-anchor-link href="#d8" title="头部社区" style="font-size: 1rem" />
+            </a-menu-item>
+          </a-anchor>
+          </a-menu>
+        </template>
+      </a-dropdown>
+
       <span
-        v-if="show_time"
+        v-if="show"
         style="
-          font-size: 22px;
+          font-size: 20px;
           color: #fff;
           float: right;
-          position: absolute;
-          margin: auto 10px;
           right: 30px;
+          margin: 5px 0px;
+          line-height: 45px;
         "
         >{{ nowTime }}</span
       >
@@ -23,7 +64,7 @@
         v-model:collapsed="collapsed"
         collapsible
         width="150px"
-        style="border-radius: 20px; background: #f0f2f5; margin: 30px 50px; padding: 10px 0px"
+        style="border-radius: 20px; background: #f0f2f5; margin: 95px 50px; padding: 10px 0px"
         :style="{ overflow: 'auto', position: 'fixed' }"
       >
         <a-menu
@@ -34,7 +75,7 @@
         >
           <div ref="containerRef">
             <a-affix :target="() => containerRef">
-              <a-anchor :affix="false">
+              <a-anchor :affix="false" :getContainer="container" :target-offset="targetOffset">
                 <a-menu-item key="1">
                   <a-anchor-link href="#d1" title="常用工具" style="font-size: 1rem" />
                 </a-menu-item>
@@ -48,28 +89,31 @@
                   <a-anchor-link href="#d4" title="摸鱼专区" style="font-size: 1rem" />
                 </a-menu-item>
                 <a-menu-item key="5">
-                  <a-anchor-link href="#d5" title="学习平台" style="font-size: 1rem" />
+                  <a-anchor-link href="#d5" title="视频专区" style="font-size: 1rem" />
                 </a-menu-item>
                 <a-menu-item key="6">
-                  <a-anchor-link href="#d6" title="协同工作" style="font-size: 1rem" />
+                  <a-anchor-link href="#d6" title="学习平台" style="font-size: 1rem" />
                 </a-menu-item>
                 <a-menu-item key="7">
-                  <a-anchor-link href="#d7" title="头部社区" style="font-size: 1rem" />
+                  <a-anchor-link href="#d7" title="协同工作" style="font-size: 1rem" />
                 </a-menu-item>
                 <a-menu-item key="8">
-                  <a-anchor-link href="#d8" title="资源推荐" style="font-size: 1rem" />
+                  <a-anchor-link href="#d8" title="头部社区" style="font-size: 1rem" />
                 </a-menu-item>
                 <a-menu-item key="9">
-                  <a-anchor-link href="#d9" title="图片专区" style="font-size: 1rem" />
+                  <a-anchor-link href="#d9" title="资源推荐" style="font-size: 1rem" />
                 </a-menu-item>
                 <a-menu-item key="10">
-                  <a-anchor-link href="#d10" title="视频专区" style="font-size: 1rem" />
+                  <a-anchor-link href="#d10" title="图片专区" style="font-size: 1rem" />
                 </a-menu-item>
                 <a-menu-item key="11">
-                  <a-anchor-link href="#d11" title="站长工具" style="font-size: 1rem" />
+                  <a-anchor-link href="#d11" title="视频专区" style="font-size: 1rem" />
                 </a-menu-item>
                 <a-menu-item key="12">
-                  <a-anchor-link href="#d12" title="其他工具" style="font-size: 1rem" />
+                  <a-anchor-link href="#d12" title="站长工具" style="font-size: 1rem" />
+                </a-menu-item>
+                <a-menu-item key="13">
+                  <a-anchor-link href="#d13" title="其他工具" style="font-size: 1rem" />
                 </a-menu-item>
               </a-anchor>
             </a-affix>
@@ -80,18 +124,24 @@
 
     <a-layout-content class="a-layout-content">
       <a-layout>
-        <a-layout-content :style="{ padding: '0 24px', minHeight: '280px' }">
+        <a-layout-content class="content" :style="{ padding: '0 24px', minHeight: '280px' }">
           <div id="d1">
             <UsefulTools />
           </div>
           <div id="d2" style="margin-top: 30px">
-            <JishuPage />
+            <TechnologyPage />
           </div>
           <div id="d3" style="margin-top: 30px">
-            <XianshiPage />
+            <TimeLimitPage />
           </div>
           <div id="d4" style="margin-top: 30px">
-            <MoyuPage />
+            <LeisurePage />
+          </div>
+          <div id="d5" style="margin-top: 30px">
+            <VedioPage />
+          </div>
+          <div id="d6" style="margin-top: 30px">
+            <StudyPage />
           </div>
         </a-layout-content>
       </a-layout>
@@ -126,25 +176,35 @@
 </template>
 <script>
   import { defineComponent, onMounted, ref } from 'vue';
+  import { AppstoreFilled } from '@ant-design/icons-vue';
   import { formateDate } from '@/components/date/nowDate';
   import UsefulTools from '@/components/content/UsefulTools.vue';
-  import JishuPage from '@/components/content/JishuPage.vue';
-  import XianshiPage from '@/components/content/XianshiPage.vue';
-  import MoyuPage from '@/components/content/MoyuPage.vue';
+  import TechnologyPage from '@/components/content/TechnologyPage.vue';
+  import TimeLimitPage from '@/components/content/TimeLimitPage.vue';
+  import LeisurePage from '@/components/content/LeisurePage.vue';
+  import VedioPage from '@/components/content/VedioPage.vue';
+  import StudyPage from '@/components/content/StudyPage.vue'
 
   export default defineComponent({
     components: {
+      AppstoreFilled,
       UsefulTools,
-      JishuPage,
-      XianshiPage,
-      MoyuPage,
+      TechnologyPage,
+      TimeLimitPage,
+      LeisurePage,
+      VedioPage,
+      StudyPage
     },
 
     setup() {
       const containerRef = ref();
       const nowTime = ref('');
       const show = ref();
-      const show_time = ref();
+      const tag = ref();
+      const getContainer = () => {
+        return document.querySelector('#content');
+      };
+      const targetOffset = ref(undefined);
 
       onMounted(() => {
         setInterval(() => {
@@ -155,16 +215,18 @@
           window.screenWidth = document.body.clientWidth;
           if (window.screenWidth <= 992) {
             show.value = false;
+            if (window.screenWidth <= 576) {
+              tag.value = false;
+            } else {
+              tag.value = true;
+            }
           } else {
             show.value = true;
           }
-          if (window.screenWidth <= 768) {
-            show_time.value = false;
-          } else {
-            show_time.value = true;
-          }
         };
         window.onresize();
+
+        targetOffset.value = window.innerHeight / 10;
       });
 
       return {
@@ -175,25 +237,14 @@
         collapsed: ref(false),
         nowTime,
         show,
-        show_time,
+        tag,
+        getContainer,
+        targetOffset,
       };
     },
   });
 </script>
 <style>
-  #components-layout-demo-top-side .logo {
-    float: left;
-    width: 120px;
-    height: 31px;
-    margin: 16px 24px 16px 0;
-    background: rgba(255, 255, 255, 0.3);
-  }
-
-  .ant-row-rtl #components-layout-demo-top-side .logo {
-    float: right;
-    margin: 16px 0 16px 24px;
-  }
-
   .site-layout-background {
     background: #f0f2f5;
   }
@@ -213,15 +264,44 @@
 
   @media screen and (max-width: 992px) {
     .a-layout-content {
-      margin: 0px 2px;
+      margin: 65px 2px;
       /* padding: 0 50px; */
     }
   }
 
   @media screen and (min-width: 992px) {
     .a-layout-content {
-      margin: 0px 30px 0px 200px;
+      margin: 65px 30px 0px 200px;
       padding: 0 50px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .a-icon {
+      float: left;
+      margin: 14px 10px 10px 0px;
+    }
+    .ant-dropdown-link {
+      float: right;
+      font-size: 20px;
+      margin-right: 0px;
+    }
+  }
+
+  @media screen and (min-width: 576px) {
+    .a-icon {
+      float: left;
+      margin: 10px 10px;
+    }
+    .a-title {
+      float: left;
+      margin: 10px 0px;
+      line-height: 45px;
+    }
+    .ant-dropdown-link {
+      float: right;
+      font-size: 20px;
+      margin-right: 0px;
     }
   }
 
@@ -251,4 +331,9 @@
   ::-webkit-scrollbar {
     display: none;
   }
+
+  .hidden-menu-item {
+    height: 42px;
+  }
+
 </style>
