@@ -15,33 +15,33 @@
           导航标签
         </a>
         <template #overlay>
-          <a-menu style="border-radius: 5px;width: 125px;">
-          <a-anchor :affix="false" :getContainer="container" :target-offset="targetOffset">
-            <a-menu-item key="tag1" class="hidden-menu-item">
-              <a-anchor-link href="#d1" title="常用工具" style="font-size: 1rem" />
-            </a-menu-item>
-            <a-menu-item key="tag2" class="hidden-menu-item">
-              <a-anchor-link href="#d2" title="技术社区" style="font-size: 1rem" />
-            </a-menu-item>
-            <a-menu-item key="tag3" class="hidden-menu-item">
-              <a-anchor-link href="#d3" title="限时专区" style="font-size: 1rem" />
-            </a-menu-item>
-            <a-menu-item key="tag4" class="hidden-menu-item">
-              <a-anchor-link href="#d4" title="摸鱼专区" style="font-size: 1rem" />
-            </a-menu-item>
-            <a-menu-item key="tag5" class="hidden-menu-item">
-              <a-anchor-link href="#d5" title="视频专区" style="font-size: 1rem" />
-            </a-menu-item>
-            <a-menu-item key="tag6" class="hidden-menu-item">
-              <a-anchor-link href="#d6" title="学习平台" style="font-size: 1rem" />
-            </a-menu-item>
-            <a-menu-item key="tag7" class="hidden-menu-item">
-              <a-anchor-link href="#d7" title="协同工作" style="font-size: 1rem" />
-            </a-menu-item>
-            <a-menu-item key="tag8" class="hidden-menu-item">
-              <a-anchor-link href="#d8" title="头部社区" style="font-size: 1rem" />
-            </a-menu-item>
-          </a-anchor>
+          <a-menu style="border-radius: 5px; width: 125px">
+            <a-anchor :affix="false" :getContainer="container" :target-offset="targetOffset">
+              <a-menu-item key="tag1" class="hidden-menu-item">
+                <a-anchor-link href="#d1" title="常用工具" style="font-size: 1rem" />
+              </a-menu-item>
+              <a-menu-item key="tag2" class="hidden-menu-item">
+                <a-anchor-link href="#d2" title="技术社区" style="font-size: 1rem" />
+              </a-menu-item>
+              <a-menu-item key="tag3" class="hidden-menu-item">
+                <a-anchor-link href="#d3" title="限时专区" style="font-size: 1rem" />
+              </a-menu-item>
+              <a-menu-item key="tag4" class="hidden-menu-item">
+                <a-anchor-link href="#d4" title="摸鱼专区" style="font-size: 1rem" />
+              </a-menu-item>
+              <a-menu-item key="tag5" class="hidden-menu-item">
+                <a-anchor-link href="#d5" title="视频专区" style="font-size: 1rem" />
+              </a-menu-item>
+              <a-menu-item key="tag6" class="hidden-menu-item">
+                <a-anchor-link href="#d6" title="学习平台" style="font-size: 1rem" />
+              </a-menu-item>
+              <a-menu-item key="tag7" class="hidden-menu-item">
+                <a-anchor-link href="#d7" title="协同工作" style="font-size: 1rem" />
+              </a-menu-item>
+              <a-menu-item key="tag8" class="hidden-menu-item">
+                <a-anchor-link href="#d8" title="头部社区" style="font-size: 1rem" />
+              </a-menu-item>
+            </a-anchor>
           </a-menu>
         </template>
       </a-dropdown>
@@ -143,6 +143,9 @@
           <div id="d6" style="margin-top: 30px">
             <StudyPage />
           </div>
+          <div id="d7" style="margin-top: 30px">
+            <DevtoolsPage />
+          </div>
         </a-layout-content>
       </a-layout>
     </a-layout-content>
@@ -183,7 +186,8 @@
   import TimeLimitPage from '@/components/content/TimeLimitPage.vue';
   import LeisurePage from '@/components/content/LeisurePage.vue';
   import VedioPage from '@/components/content/VedioPage.vue';
-  import StudyPage from '@/components/content/StudyPage.vue'
+  import StudyPage from '@/components/content/StudyPage.vue';
+  import DevtoolsPage from '@/components/content/DevtoolsPage.vue'
 
   export default defineComponent({
     components: {
@@ -193,7 +197,8 @@
       TimeLimitPage,
       LeisurePage,
       VedioPage,
-      StudyPage
+      StudyPage,
+      DevtoolsPage,
     },
 
     setup() {
@@ -213,15 +218,15 @@
 
         window.onresize = () => {
           window.screenWidth = document.body.clientWidth;
-          if (window.screenWidth <= 992) {
-            show.value = false;
-            if (window.screenWidth <= 576) {
-              tag.value = false;
-            } else {
-              tag.value = true;
-            }
-          } else {
+          if (window.screenWidth > 992) {
             show.value = true;
+            tag.value = true;
+          } else if (window.screenWidth > 576 && window.screenWidth <= 992) {
+            show.value = false;
+            tag.value = true;
+          } else {
+            show.value = false;
+            tag.value = false;
           }
         };
         window.onresize();
@@ -335,5 +340,4 @@
   .hidden-menu-item {
     height: 42px;
   }
-
 </style>

@@ -1,26 +1,26 @@
 <template>
-  <div class="tools-name">学习平台</div>
+  <div class="tools-name">开发工具</div>
   <hr color="#f0f0f0" />
   <a-row :gutter="{ xs: 8, sm: 16, md: 24, lg: 32 }">
     <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="1">
-      <a class="tools-hover" href="https://www.runoob.com/" target="blank">
+      <a class="tools-hover" href="https://pc.qq.com/category/c13.html" target="blank">
         <div class="icon"
-          ><img class="tools-img" src="https://www.cxy521.com/static/img/index/study/cn.ico"
+          ><img class="tools-img" src="https://www.cxy521.com/static/img/index/devtool/pc-qq.png"
         /></div>
         <div class="content">
-          <span class="title">菜鸟教程</span>
-          <p class="description">学的不仅是技术，更是梦想！</p>
+          <span class="title">软件下载中心</span>
+          <p class="description">腾讯软件免费下载中心，好用，可高速下载</p>
         </div>
       </a>
     </a-col>
     <a-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4" :order="2">
-      <a class="tools-hover" href="https://www.yiibai.com/" target="blank">
+      <a class="tools-hover" href="https://code.visualstudio.com/" target="blank">
         <div class="icon"
           ><img class="tools-img" src="https://www.cxy521.com/static/img/index/study/yibai.png"
         /></div>
         <div class="content">
-          <span class="title">易百教程</span>
-          <p class="description">专注于IT教程和实例</p>
+          <span class="title">VSCode</span>
+          <p class="description">最受欢迎的代码编辑器！</p>
         </div>
       </a>
     </a-col>
